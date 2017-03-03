@@ -1,4 +1,3 @@
-
 {
   "name": "HorrorTweets",
   "version": "1.0.0",
@@ -17,10 +16,11 @@
   "dependencies": {
     "async": "^2.1.5",
     "axios": "^0.15.3",
-    "debug": "^2.6.1",
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
+    "bson": "^1.0.4",
     "cheerio": "^0.22.0",
+    "debug": "^2.6.1",
     "image-scraper": "^0.2.0",
     "mongoose": "^4.7.1",
     "tumblr.js": "^1.1.1",
