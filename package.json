@@ -4,8 +4,8 @@
   "description": "Get tweets from creepy sites and post them to twitter.",
   "main": "index.js",
   "scripts": {
-    "stream": "node dist/tweeter/stream.js",
-    "start": "node dist/index.js"
+    "start": "node dist/tweeter/stream.js",
+    "stream": "node dist/index.js"
   },
   "engines": {
     "node": "7.5.0"
