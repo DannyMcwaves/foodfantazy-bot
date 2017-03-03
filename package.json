@@ -22,7 +22,7 @@
     "cheerio": "^0.22.0",
     "debug": "^2.6.1",
     "image-scraper": "^0.2.0",
-    "mongoose": "^4.7.1",
+    "mongoose": "4.8.5",
     "tumblr.js": "^1.1.1",
     "twit": "^2.2.5"
   }
