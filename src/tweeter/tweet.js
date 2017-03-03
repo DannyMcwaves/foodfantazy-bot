@@ -27,7 +27,7 @@ const Post = (img, title) => {
                 })
                 .then(result => {
                     // now we can reference the media posted and then attach a tweet to it.
-                    let hastags = "#REVELATOR #horrorfilm #horror #indiefilm #film #movie #trailer #SupportIndieFilm #ComingSoon #horrormovies #horrormovie #staytuned #ghost #creepy #spooky #boo #halloween #streaming #cinema #filmmaking #itunes #netflix #follow #rt"
+                    let hastags = "#REVELATOR #horrorfilm #horror #indiefilm";
                     let params = { status: title + " " + hastags, media_ids: [mediaIdString] };
                     Twitter.post("statuses/update", params)
                         .catch(err => {
