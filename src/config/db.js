@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const DBurl = 'mongodb://127.0.0.1:27017/content';
+const DBurl = 'mongodb://heroku_6qp6pwvz:8vbp81kmm8gs6013ni2p9pojdp@ds113580.mlab.com:13580/heroku_6qp6pwvz';
 mongoose.connect(DBurl);
 
 const db = mongoose.connection;
