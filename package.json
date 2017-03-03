@@ -5,8 +5,11 @@
   "description": "Get tweets from creepy sites and post them to twitter.",
   "main": "index.js",
   "scripts": {
-    "stream": "./node_modules/.bin/babel-node ./src/tweeter/stream.js",
-    "start": "./node_modules/.bin/babel-node ./src/index.js"
+    "stream": "node dist/tweeter/stream.js",
+    "start": "node dist/index.js"
+  },
+  "engines": {
+    "node": "7.5.0"
   },
   "keywords": [],
   "author": "Danny Mcwaves",
@@ -14,7 +17,7 @@
   "dependencies": {
     "async": "^2.1.5",
     "axios": "^0.15.3",
-    "debug": "2.6.1",
+    "debug": "^2.6.1",
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "cheerio": "^0.22.0",
