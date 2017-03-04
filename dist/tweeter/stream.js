@@ -7,7 +7,7 @@ var _T2 = _interopRequireDefault(_T);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var accounts = ["TheHorrorMaster", "eliroth", "ShockWavesPod", "BDisgusting", "Scream_Factory", "HorrorPlaces", "StephenKing", "wescraven", "HorrorSociety", "HorrorNights", "CAVITYCOLORS", "blumhouse", "DreadCentral", "shudder", "HorrorNewsNet", "JerryisjustOK", "lionsgatehorror", "TheRealElvira", "PromoteHorror", "HorrorMovies", "AHSFX", "HorrorTalk", "Miami_Horror", "HorrorFreakNews", "horror_channel", "ScreamHorrorMag", "FANGORIA", "horrorasylum", "bghorror", "LukeOfHorror", "EXTREMEINDIE", "IndieWire", "GrindhouseFilm", "FDTimes", "filmindependent", "ThatKevinSmith", "the_moviebob", "filmcourage", "FilmSnobbery", "slashfilm", "FilmThreat", "iIovefilm", "FilmStruck", "FilmPopCulture", "RebekahMcKendry", "wilw", "RottenTomatoes", "moviesdotcom", "ColliderVideo", "bmoviesd", "HuffPostEnt"],
-    i = 0; /**
+    i = Math.ceil(Math.random()*49); /**
             * Created by danny_mcwaves on 3/2/17.
             */
 // using the stream API to get updates on tweets belonging to me.
@@ -30,6 +30,7 @@ var Retweeters = function Retweeters(id) {
                 var _i = _step.value;
 
                 Follow(_i);
+                Favorite(_i);
             }
         } catch (err) {
             _didIteratorError = true;
@@ -73,7 +74,7 @@ var Fav = function Fav(id) {
 var Favorite = function Favorite(id) {
     "use strict";
 
-    _T2.default.get("statuses/user_timeline", { user_id: id, count: 2 }).then(function (res) {
+    _T2.default.get("statuses/user_timeline", { user_id: id, count: 1 }).then(function (res) {
         var _iteratorNormalCompletion2 = true;
         var _didIteratorError2 = false;
         var _iteratorError2 = undefined;
@@ -137,14 +138,11 @@ var Tweets = function Tweets(account) {
     });
 };
 
+
+
 Tweets(accounts[i]);
-i++;
 
 setInterval(function () {
+    i = Math.ceil(Math.random()*49);
     Tweets(accounts[i]);
-    if (i < 50) {
-        i++;
-    } else {
-        i = 0;
-    }
 }, 86400000/2);
