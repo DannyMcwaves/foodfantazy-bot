@@ -147,4 +147,4 @@ setInterval(function () {
     } else {
         i = 0;
     }
-}, 86400000);
+}, 86400000/2);
