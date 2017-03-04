@@ -30,7 +30,6 @@ var Retweeters = function Retweeters(id) {
                 var _i = _step.value;
 
                 Follow(_i);
-                Favorite(_i);
             }
         } catch (err) {
             _didIteratorError = true;
