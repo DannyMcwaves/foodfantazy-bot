@@ -46,7 +46,7 @@ var Retweeters = function Retweeters(id) {
             }
         }
     }).catch(function (err) {
-        console.log(err.name);
+        console.log(err);
     });
 };
 
@@ -56,7 +56,7 @@ var Follow = function Follow(id) {
     _T2.default.post("friendships/create", { user_id: id }).then(function (res) {
         console.log(res.data.name);
     }).catch(function (err) {
-        console.log(err.name);
+        console.log(err);
     });
 };
 
@@ -133,7 +133,7 @@ var Tweets = function Tweets(account) {
             }
         }
     }).catch(function (err) {
-        console.log(err.name);
+        console.log(err);
     });
 };
 
