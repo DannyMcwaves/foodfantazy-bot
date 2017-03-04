@@ -51,4 +51,4 @@ coverage
 yarn.lock
 
 .bowerrc
-images
+.idea/
