@@ -62,4 +62,12 @@ stream.stdout.on("data", function (data) {
     console.log(data.toString());
 });
 
+var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
+bind.stderr.on("data", function (data) {
+    console.log(data.toString());
+});
+bind.stdout.on("data", function (data) {
+    console.log(data.toString());
+});
+
 (0, _save2.default)(find);
