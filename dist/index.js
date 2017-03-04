@@ -53,17 +53,9 @@ var find = function find() {
         });
     };
 
-    setTimeout(tweet, 120000);
-    setInterval(tweet, 9000000);
+    tweet();
+    setInterval(tweet, 120000);
 };
-
-//var stream = (0, _child_process.spawn)("npm", ["run", "stream"]);
-//stream.stderr.on("data", function (data) {
-//    console.log(data.toString());
-//});
-//stream.stdout.on("data", function (data) {
-//    console.log(data.toString());
-//});
 
 var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
 bind.stderr.on("data", function (data) {
@@ -72,5 +64,14 @@ bind.stderr.on("data", function (data) {
 bind.stdout.on("data", function (data) {
     console.log(data.toString());
 });
+
+var stream = (0, _child_process.spawn)("npm", ["run", "stream"]);
+stream.stderr.on("data", function (data) {
+   console.log(data.toString());
+});
+stream.stdout.on("data", function (data) {
+   console.log(data.toString());
+});
+
 
 (0, _save2.default)(find);
