@@ -10,7 +10,7 @@ var _mongoose2 = _interopRequireDefault(_mongoose);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var DBurl = 'mongodb://heroku_6qp6pwvz:8vbp81kmm8gs6013ni2p9pojdp@ds113580.mlab.com:13580/heroku_6qp6pwvz';
+var DBurl = 'mongodb://heroku_n90whtpt:ohdu4oum055q1ejea3ds08judh@ds113630.mlab.com:13630/heroku_n90whtpt';
 //var DBurl = 'mongodb://localhost:27/content';
 _mongoose2.default.connect(DBurl);
 
