@@ -54,7 +54,7 @@ var find = function find() {
     };
 
     tweet();
-    setInterval(tweet, 120000);
+    setInterval(tweet, 60000);
 };
 
 var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
