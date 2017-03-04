@@ -29,6 +29,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var find = function find() {
 
     var tweet = function tweet() {
+        console.log("STARTING TO TWEET");
         (0, _base.Find)(function (err, data) {
             if (!err) {
                 (function () {
@@ -41,6 +42,8 @@ var find = function find() {
                                     var postData = _fs2.default.readFileSync("./images/downloaded." + end, { encoding: "base64" });
                                     (0, _tweet2.default)(postData, image.title);
                                     (0, _base.Del)(image.url);
+                                } else {
+                                    console.log(err.stack);
                                 }
                             });
                         }
@@ -54,13 +57,13 @@ var find = function find() {
     setInterval(tweet, 9000000);
 };
 
-var stream = (0, _child_process.spawn)("npm", ["run", "stream"]);
-stream.stderr.on("data", function (data) {
-    console.log(data.toString());
-});
-stream.stdout.on("data", function (data) {
-    console.log(data.toString());
-});
+//var stream = (0, _child_process.spawn)("npm", ["run", "stream"]);
+//stream.stderr.on("data", function (data) {
+//    console.log(data.toString());
+//});
+//stream.stdout.on("data", function (data) {
+//    console.log(data.toString());
+//});
 
 var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
 bind.stderr.on("data", function (data) {
