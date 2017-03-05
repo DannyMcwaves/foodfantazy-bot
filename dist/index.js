@@ -33,8 +33,8 @@ var find = function find() {
         (0, _base.Find)(function (err, data) {
             if (!err) {
                 (function () {
-                    console.log(data);
                     if (data.length > 0) {
+                        console.log(data);
                         var image = data[0],
                             end = image.url.split(".").pop();
                         (0, _request2.default)(image.url, { encoding: "binary" }, function (err, res, data) {
