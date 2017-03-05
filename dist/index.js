@@ -4,6 +4,8 @@ var _base = require("./config/base");
 
 var _tweet = require("./tweeter/tweet");
 
+var _facebook = require("./fb");
+
 var _tweet2 = _interopRequireDefault(_tweet);
 
 var _request = require("request");
@@ -37,6 +39,7 @@ var find = function find() {
                         console.log(data);
                         var image = data[0],
                             end = image.url.split(".").pop();
+                            _facebook(image);
                         (0, _request2.default)(image.url, { encoding: "binary" }, function (err, res, data) {
                             if (!err) {
                                 _fs2.default.writeFile("./images/downloaded." + end, data, 'binary', function (err) {
@@ -60,7 +63,7 @@ var find = function find() {
     };
 
     tweet();
-    setInterval(tweet, 60000*60*2);
+    // setInterval(tweet, 60000*60*2);
 };
 
 var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
