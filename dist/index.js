@@ -39,7 +39,7 @@ var find = function find() {
                         console.log(data);
                         var image = data[0],
                             end = image.url.split(".").pop();
-                            _facebook(image);
+                            console.log(_facebook);
                         (0, _request2.default)(image.url, { encoding: "binary" }, function (err, res, data) {
                             if (!err) {
                                 _fs2.default.writeFile("./images/downloaded." + end, data, 'binary', function (err) {
