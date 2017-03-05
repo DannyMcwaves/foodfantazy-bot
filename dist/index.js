@@ -33,28 +33,30 @@ var find = function find() {
         (0, _base.Find)(function (err, data) {
             if (!err) {
                 (function () {
-                    var image = data[0],
-                        end = image.url.split(".").pop();
-                    (0, _request2.default)(image.url, { encoding: "binary" }, function (err, res, data) {
-                        if (!err) {
-                            _fs2.default.writeFile("./images/downloaded." + end, data, 'binary', function (err) {
-                                if (!err) {
-                                    var postData = _fs2.default.readFileSync("./images/downloaded." + end, { encoding: "base64" });
-                                    (0, _tweet2.default)(postData, image.title);
-                                    (0, _base.Del)(image.url);
-                                } else {
-                                    console.log(err.stack);
-                                }
-                            });
-                        }
-                    });
+                    if (data.length > 0) {
+                        var image = data[0],
+                            end = image.url.split(".").pop();
+                        (0, _request2.default)(image.url, { encoding: "binary" }, function (err, res, data) {
+                            if (!err) {
+                                _fs2.default.writeFile("./images/downloaded." + end, data, 'binary', function (err) {
+                                    if (!err) {
+                                        var postData = _fs2.default.readFileSync("./images/downloaded." + end, { encoding: "base64" });
+                                        (0, _tweet2.default)(postData, image.title);
+                                        (0, _base.Del)(image.url);
+                                    } else {
+                                        console.log(err.stack);
+                                    }
+                                });
+                            }
+                        });
+                    }
                 })();
             }
         });
     };
 
     tweet();
-    setInterval(tweet, 60000*60);
+    setInterval(tweet, 60000*60*2);
 };
 
 var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
