@@ -49,7 +49,7 @@ var find = function find() {
                                 });
                             }
                             (0, _base.Del)(image.url);
-                            console.log("cleared");
+                            console.log("image is deleted");
                         });
                     } else {
                         console.log("DATABASE IS EMPTY");
