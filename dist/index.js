@@ -43,13 +43,16 @@ var find = function find() {
                                     if (!err) {
                                         var postData = _fs2.default.readFileSync("./images/downloaded." + end, { encoding: "base64" });
                                         (0, _tweet2.default)(postData, image.title);
-                                        (0, _base.Del)(image.url);
                                     } else {
                                         console.log(err.stack);
                                     }
                                 });
                             }
+                            (0, _base.Del)(image.url);
+                            console.log("cleared");
                         });
+                    } else {
+                        console.log("DATABASE IS EMPTY");
                     }
                 })();
             }
