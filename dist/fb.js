@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
 // this is the facebook script.
 
 var fb = require("fbgraph"),
-    accessToken = "EAAFjaC5NXrQBAEqGNZBrFe5kbrpQ3QbGD2qGMGder5QX1ZCcEO2KCcfhUjnZBjsONrGQnsb7f8F4edNBcAPVDl0VJo9Gwx7mrf8ATW3kM4GZCScZAw333uwaoPXf76m1qcQOZALnOJBYKQ237pvOL1ij45beNnDvp9idsBtbF5ZBdNxmBvXB34OR0ppZC40ipZAWdTjAX8wDlUAZDZD",
+    accessToken = "EAAFjaC5NXrQBAK0VjJmEeYFERtEZCY2PAQn3POuQctT2Q73OBOpwgmQldwfOy4fNByZBdSfva7OZBV2Cw03u8QZCrkmKmDVYQ72a9OGotdIuiDPbaM2YsxsSEDqlsz11Bv8SvUzJza4HSfpEBFrCwnXuzBr6agMiWwOSyRzO9AZDZD",
     id = "165987650576972";
 
 fb.setAccessToken(accessToken);
