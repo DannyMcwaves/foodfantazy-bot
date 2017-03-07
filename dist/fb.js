@@ -10,14 +10,15 @@ Object.defineProperty(exports, "__esModule", {
 // this is the facebook script.
 
 var fb = require("fbgraph"),
-    accessToken = "EAAFjaC5NXrQBAC9NiauPPlCqPNAkNWt8qQykTheriK6gejGoOIVijjEiUviZA3HPT7Ei2uegrFqCWu7heZBKriPjkpOm2GndDs80iimmresBiKKDqkSjStmMAZCBCduB5Ht5buyM6ywrAYZAo2I9gAcRs9ZAZCMFsQRskoiZBAhvwZDZD";
+    accessToken = "EAAFjaC5NXrQBAEqGNZBrFe5kbrpQ3QbGD2qGMGder5QX1ZCcEO2KCcfhUjnZBjsONrGQnsb7f8F4edNBcAPVDl0VJo9Gwx7mrf8ATW3kM4GZCScZAw333uwaoPXf76m1qcQOZALnOJBYKQ237pvOL1ij45beNnDvp9idsBtbF5ZBdNxmBvXB34OR0ppZC40ipZAWdTjAX8wDlUAZDZD",
+    id = "165987650576972";
 
 fb.setAccessToken(accessToken);
 
 var Facebook = function Facebook(obj) {
     "use strict";
 
-    fb.post("me/photos", {
+    fb.post(id+"/photos", {
         url: obj.url,
         caption: obj.title + " #REVELATOR #horrorfilm #horror #indiefilm #film #movie #trailer #SupportIndieFilm #ComingSoon #horrormovies #horrormovie #staytuned #ghost #creepy #spooky #boo #halloween #streaming #cinema #filmmaking #itunes #netflix #follow #rt"
     }, function (err, res) {
