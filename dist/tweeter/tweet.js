@@ -29,7 +29,9 @@ var Post = function Post(img, title) {
         }).then(function (result) {
             // now we can reference the media posted and then attach a tweet to it.
             var hastags = "#REVELATOR #horrorfilm #horror #indiefilm";
-            var params = { status: title + " " + hastags, media_ids: [mediaIdString] };
+	    var stat = title + " " + hastags;
+	    var stats = stat.length < 140 ? stat : title.length < 140 ? title : hastags;
+            var params = { status: stats, media_ids: [mediaIdString] };
             _T2.default.post("statuses/update", params).catch(function (err) {
                 console.log("[-] ERROR: ", err.stack);
             }).then(function (result) {
