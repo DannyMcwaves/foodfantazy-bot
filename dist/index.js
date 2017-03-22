@@ -63,7 +63,7 @@ var find = function find() {
     };
 
     tweet();
-    setInterval(tweet, 60000*60);
+    setInterval(tweet, 60000*60*2);
 };
 
 //var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
