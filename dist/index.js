@@ -66,13 +66,13 @@ var find = function find() {
     setInterval(tweet, 60000*60);
 };
 
-var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
-bind.stderr.on("data", function (data) {
-    console.log(data.toString());
-});
-bind.stdout.on("data", function (data) {
-    console.log(data.toString());
-});
+//var bind = (0, _child_process.spawn)("npm", ["run", "bind"]);
+//bind.stderr.on("data", function (data) {
+//    console.log(data.toString());
+//});
+//bind.stdout.on("data", function (data) {
+//    console.log(data.toString());
+//});
 
 //var stream = (0, _child_process.spawn)("npm", ["run", "stream"]);
 //stream.stderr.on("data", function (data) {
