@@ -10,8 +10,8 @@ var _mongoose2 = _interopRequireDefault(_mongoose);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var DBurl = 'mongodb://heroku_n90whtpt:ohdu4oum055q1ejea3ds08judh@ds113630.mlab.com:13630/heroku_n90whtpt';
-//var DBurl = 'mongodb://localhost:27/content';
+//var DBurl = 'mongodb://heroku_n90whtpt:ohdu4oum055q1ejea3ds08judh@ds113630.mlab.com:13630/heroku_n90whtpt';
+var DBurl = 'mongodb://localhost:27017/content';
 _mongoose2.default.connect(DBurl);
 
 var db = _mongoose2.default.connection;

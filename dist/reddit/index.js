@@ -10,9 +10,7 @@ var _download2 = _interopRequireDefault(_download);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var sources = ["https://www.reddit.com/r/creepy.json", "https://www.reddit.com/r/creepy_gifs.json"]; /**
-                                                                                                      * Created by danny_mcwaves on 3/3/17.
-                                                                                                      */
+var sources = ["https://www.reddit.com/r/food/top.json?sort=top&t=day&limit=8", "https://www.reddit.com/r/FoodPorn/top.json?sort=top&t=day&limit=8"];
 
 var getReddit = function getReddit() {
     var _iteratorNormalCompletion = true;

@@ -29,7 +29,7 @@ var Download = function Download(url) {
 
                 if (["jpg", "jpeg", "png", "gif", "svg"].indexOf(end) !== -1) {
                     var _data = {
-                        title: i.data.title,
+                        title: i.data.title.replace(/([\[\]])|([Ii] ate)|(OC)|(\d+\s*x\s*\d+)|(Homemade)/gi, ""),
                         url: i.data.url
                     };
                     (0, _base.Save)(_data);

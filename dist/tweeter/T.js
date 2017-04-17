@@ -11,10 +11,11 @@ var _twit2 = _interopRequireDefault(_twit);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Twitter = new _twit2.default({
-  consumer_key: "ns9vWFOTffIdTMwYDr6EzyKSY",
-  consumer_secret: 'UgEtCAdNNfDX7Q3SPzPeaxrJDWfNC1DNB27PbhJRP5Wx5RX5nF',
-  access_token: '3240991202-BETHIwQwTuu9GIaUE4onPwfdFvoJeUDciRh8nQF',
-  access_token_secret: 'XM5DKYaqX9iiP6CVK5UbU3QFTitxtcl96u6VftYBVfbVl',
-  timeout_ms: 60 * 1000 });
+    consumer_key:         "iGe22ai4fSLmSxCCtjBc7HlR1",
+     consumer_secret:      'xLRUsAUQp9VA66OQnYk0BrDNrOf1UEeNFAfvK4UxMPYqi9R9lE',
+     access_token:         '849757768672325632-dRNIBHOqik6carryUbdOar7v1pNLjtB',
+     access_token_secret:  'Bx0Z2NFvhy9rQJoBVCHBGsFvVAN9CNqQkQQEzyHCC9G5j',
+     timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+ });
 
 exports.default = Twitter;
